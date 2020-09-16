@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                             ((ImageView) v).setTag(mGame.moveType);
                         } else {
                             ((ImageView) v).setImageResource(R.drawable.o);
-                            ((ImageView) v).setTag(mGame.moveType);
+                            ((ImageView) v).setTag(Game.MoveType.OH);
                         }
                         mGame.moveCount++;
 

@@ -29,7 +29,7 @@ public class Game {
 
     public boolean checkForWin(ImageView[] imageViews) {
         String[] field = new String[9];
-        int[] numbCheck = new int[9];
+        list.clear();
         for (int i = 0; i < 9; i++) {
             if (imageViews[i].getTag() != null) {
                 field[i] = imageViews[i].getTag().toString();
@@ -41,7 +41,11 @@ public class Game {
         }
 
         for (int[] winningPosition: winningPositions) {
-            if (list.contains(winningPosition)) {
+            List<Integer> winningList = new ArrayList<Integer>();
+            for(int i = 0; i < 3; i++) {
+                winningList.add(winningPosition[i]);
+            }
+            if (list.contains(winningList)) {
                 return true;
                 
             }
