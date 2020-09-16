@@ -40,9 +40,13 @@ public class Game {
             }
         }
 
-        if (list.contains(winningPositions)) {
-            return true;
+        for (int[] winningPosition: winningPositions) {
+            if (list.contains(winningPosition)) {
+                return true;
+                
+            }
         }
+
 
         /*for (int i = 0; i < 3; i++) {
             if (field[0][i].equals(field[1][i])
